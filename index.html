@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WEBSTUDIO</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +22,7 @@
   <header class="header">
     <div class="container header-container">
       <nav class="navigation">
-        <a href="./index.html" class="logo-navigation">Web<span class="logo-accent">Studio</span></a>
+        <a href="./index.html" class="logo-navigation header-logo">Web<span class="logo-accent">Studio</span></a>
         <ul class="menu">
           <li class="nav-item"><a href="./index.html" class="nav-link current">Studio</a></li>
           <li class="nav-item"><a href="" class="nav-link">Portfolio</a></li>
@@ -35,6 +36,70 @@
           <li class="contacts-item"><a href="tel:+110001111111" class="contacts-link">+11 (000) 111-11-11</a></li>
         </ul>
       </address>
+      <button class="burger-btn" type="button" data-menu-open>
+        <svg class="burger-icon" width="24" height="24">
+          <use href="./images/icons.svg#icon-heroicons-burger"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="mobile-menu" data-menu>
+      <div class="container mobile-menu-container">
+        <button class="mobile-menu-close" aria-label="Close mobile menu" data-menu-close>
+          <svg width="8" height="8">
+            <use href="./images/icons.svg#icon-close-black"></use>
+          </svg>
+        </button>
+        <nav class="mobile-menu-nav">
+          <ul class="mobile-menu-list">
+            <li><a href="./index.html" class="mobile-nav-link current">Studio</a></li>
+            <li><a href="" class="mobile-nav-link">Portfolio</a></li>
+            <li><a href="" class="mobile-nav-link">Contacts</a></li>
+          </ul>
+        </nav>
+        <address>
+          <ul class="mobile-contacts-list">
+            <li class="contacts-item"><a href="tel:+110001111111" class="mobile-contacts-link contacts-link-tel">+11
+                (000)
+                111-11-11</a>
+            </li>
+            <li class="contacts-item"><a href="mailto:info@devstudio.com"
+                class="mobile-contacts-link">info@devstudio.com</a>
+            </li>
+          </ul>
+        </address>
+        <div>
+          <ul class="footer-icons-menu">
+            <li class="icon-item">
+              <a href="#" aria-label="instagram" class="social-link">
+                <svg width="24" height="24" class="svg-icon">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="icon-item">
+              <a href="#" aria-label="twitter" class="social-link">
+                <svg width="24" height="24" class="svg-icon">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="icon-item">
+              <a href="#" aria-label="facebook" class="social-link">
+                <svg width="24" height="24" class="svg-icon">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="icon-item">
+              <a href="#" aria-label="in" class="social-link">
+                <svg width="24" height="24" class="svg-icon">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </header>
   <main>
@@ -105,7 +170,8 @@
         <h2 class="section-title">Our Team</h2>
         <ul class="team-list">
           <li class="team-item">
-            <img src="./images/mark.jpg" alt="Mark Guerrero" width="264" class="team-img">
+            <img src="./images/mark.jpg" srcset="./images/mark.jpg 1x, ./images/guerro2x.jpg 2x"
+              sizes="(max-width: 768px) 100vw, 264px" alt="Mark Guerrero" class="team-img">
             <div class="team-info">
               <h3 class="team-name">Mark Guerrero</h3>
               <p class="team-position">Product Designer</p>
@@ -142,7 +208,8 @@
             </div>
           </li>
           <li class="team-item">
-            <img src="./images/ford.jpg" alt="Tom Ford" width="264" class="team-img">
+            <img src="./images/ford.jpg" srcset="./images/ford.jpg 1x, ./images/ford2x.jpg 2x"
+              sizes="(max-width: 768px) 100vw, 264px" alt="Tom Ford" class="team-img">
             <div class="team-info">
               <h3 class="team-name">Tom Ford</h3>
               <p class="team-position">Frontend Developer</p>
@@ -179,7 +246,8 @@
             </div>
           </li>
           <li class="team-item">
-            <img src="./images/camila.jpg" alt="Camila Garcia" width="264" class="team-img">
+            <img src="./images/camila.jpg" srcset="./images/camila.jpg 1x, ./images/garcia2x.jpg 2x"
+              sizes="(max-width: 768px) 100vw, 264px" alt="Camila Garcia" class="team-img">
             <div class="team-info">
               <h3 class="team-name">Camila Garcia</h3>
               <p class="team-position">Marketing</p>
@@ -216,7 +284,8 @@
             </div>
           </li>
           <li class="team-item">
-            <img src="./images/wilson.jpg" alt="Daniel Wilson" width="264" class="team-img">
+            <img src="./images/wilson.jpg" srcset="./images/wilson.jpg 1x, ./images/wilson2x.jpg 2x"
+              sizes="(max-width: 768px) 100vw, 264px" alt="Daniel Wilson" class="team-img">
             <div class="team-info">
               <h3 class="team-name">Daniel Wilson</h3>
               <p class="team-position">UI Designer</p>
@@ -264,7 +333,8 @@
         <ul class="portfolio-list">
           <li class="portfolio-item">
             <div class="portfolio-overlay-wrapper">
-              <img src="./images/banking.jpg" alt="Banking App" width="360" height="300" class="portfolio-img">
+              <img src="./images/banking.jpg" srcset="./images/banking.jpg 1x, ./images/banking2x.jpg 2x"
+                sizes="(max-width: 768px) 100vw, 360px" alt="Banking App" class="portfolio-img">
               <p class="portfolio-overlay-text">14 Stylish and User-Friendly App Design Concepts · Task Manager App ·
                 Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
             </div>
@@ -275,7 +345,8 @@
           </li>
           <li class="portfolio-item">
             <div class="portfolio-overlay-wrapper">
-              <img src="./images/paymant.jpg" alt="Cashless Payment" width="360" height="300" class="portfolio-img">
+              <img src="./images/paymant.jpg" srcset="./images/paymant.jpg 1x, ./images/paymant2x.jpg 2x"
+                sizes="(max-width: 768px) 100vw, 360px" alt="Cashless Payment" class="portfolio-img">
               <p class="portfolio-overlay-text">14 Stylish and User-Friendly App Design Concepts · Task Manager App ·
                 Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
             </div>
@@ -286,7 +357,8 @@
           </li>
           <li class="portfolio-item">
             <div class="portfolio-overlay-wrapper">
-              <img src="./images/meditation.jpg" alt="Meditation App" width="360" height="300" class="portfolio-img">
+              <img src="./images/meditation.jpg" srcset="./images/meditation.jpg 1x, ./images/app2x.jpg 2x"
+                sizes="(max-width: 768px) 100vw, 360px" alt="Meditation App" class="portfolio-img">
               <p class="portfolio-overlay-text">14 Stylish and User-Friendly App Design Concepts · Task Manager App ·
                 Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
             </div>
@@ -297,7 +369,8 @@
           </li>
           <li class="portfolio-item">
             <div class="portfolio-overlay-wrapper">
-              <img src="./images/taxi.jpg" alt="Taxi Service" width="360" height="300" class="portfolio-img">
+              <img src="./images/taxi.jpg" srcset="./images/taxi.jpg 1x, ./images/taxi2x.jpg 2x"
+                sizes="( Dmax-width: 768px) 100vw, 360px" alt="Taxi Service" class="portfolio-img">
               <p class="portfolio-overlay-text">14 Stylish and User-Friendly App Design Concepts · Task Manager App ·
                 Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
             </div>
@@ -308,7 +381,8 @@
           </li>
           <li class="portfolio-item">
             <div class="portfolio-overlay-wrapper">
-              <img src="./images/screen.jpg" alt="Screen Illustrations" width="360" height="300" class="portfolio-img">
+              <img src="./images/screen.jpg" srcset="./images/screen.jpg 1x, ./images/screen2x.jpg 2x"
+                sizes="( Dmax-width: 768px) 100vw, 360px" alt="Screen Illustrations" class="portfolio-img">
               <p class="portfolio-overlay-text">14 Stylish and User-Friendly App Design Concepts · Task Manager App ·
                 Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
             </div>
@@ -319,7 +393,8 @@
           </li>
           <li class="portfolio-item">
             <div class="portfolio-overlay-wrapper">
-              <img src="./images/courses.jpg" alt="Online Courses" width="360" height="300" class="portfolio-img">
+              <img src="./images/courses.jpg" srcset="./images/courses.jpg 1x, ./images/courses2x.jpg 2x"
+                sizes="(max-width: 768px) 100vw, 360px" alt="Online Courses" class="portfolio-img">
               <p class="portfolio-overlay-text">14 Stylish and User-Friendly App Design Concepts · Task Manager App ·
                 Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
             </div>
@@ -395,7 +470,7 @@
       </div>
     </div>
   </footer>
-  <div class="modal-overlay" data-modal>
+  <div class="hiden" class="modal-overlay" data-modal>
     <div class="modal-overlay-window">
       <button type="button" class="window-button" data-modal-close>
         <svg width="8" height="8" class="icon-close">
@@ -453,6 +528,7 @@
   </div>
 
   <script src="./js/modal.js"></script>
+  <script src="./js/menu.js"></script>
 </body>
 
 </html>
