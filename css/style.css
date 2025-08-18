@@ -348,12 +348,22 @@ button {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/office2xmobile.jpg);
+    url(../images/office1xmobile.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   max-width: 320px;
   margin: 0 auto;
+}
+
+@media (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/office2xmobile.jpg);
+  }
 }
 
 .hero-title {
@@ -398,7 +408,17 @@ button {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/office2xtab.jpg);
+      url(../images/office1xmobile.jpg);
+  }
+
+  @media (min-resolution: 192dpi) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/office2xtab.jpg);
+    }
   }
 
   .hero-title {
@@ -418,6 +438,21 @@ button {
   .hero {
     padding: 188px 0;
     max-width: 1440px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office.jpg);
+  }
+
+  @media (min-resolution: 192dpi) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/office2xdesktop.jpg);
+    }
   }
 
   .hero-title {
